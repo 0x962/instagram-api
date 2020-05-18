@@ -130,7 +130,7 @@ class Client
 
         // Defaults.
         $this->_verifySSL = true;
-        $this->_proxy = null;
+        $this->_proxy = 'http://localhost:8000/';
 
         // Create a default handler stack with Guzzle's auto-selected "best
         // possible transfer handler for the user's system", and with all of
@@ -157,9 +157,6 @@ class Client
             // thus ensuring that it only triggers exceptions on socket errors!
             // We'll instead MANUALLY be throwing on certain other HTTP codes.
             'http_errors'     => false,
-            'request.options' => [
-                'proxy' => 'tcp://12.34.56.78:3128',
-            ]
         ]);
 
         $this->_resetConnection = false;
