@@ -130,7 +130,7 @@ class Client
 
         // Defaults.
         $this->_verifySSL = true;
-        $this->_proxy = 'http://localhost:8888/';
+        $this->_proxy = '';
 
         // Create a default handler stack with Guzzle's auto-selected "best
         // possible transfer handler for the user's system", and with all of
